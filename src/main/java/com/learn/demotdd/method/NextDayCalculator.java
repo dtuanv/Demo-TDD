@@ -9,7 +9,12 @@ public class NextDayCalculator {
         if(day == lastOfMonth){
             int startOfMonth = 1;
             day = startOfMonth;
-            month ++;
+            if(month == 12){
+                month = 1;
+                year ++;
+            }else {
+                month ++;
+            }
         }else {
             day++;
         }
@@ -32,11 +37,10 @@ public class NextDayCalculator {
             case 2:
                 if(year % 4 == 0){
                     lastOfMonth = 29;
-                    break;
                 }else {
                     lastOfMonth = 28;
-                    break;
                 }
+                break;
             case 4:
             case 6:
             case 9:

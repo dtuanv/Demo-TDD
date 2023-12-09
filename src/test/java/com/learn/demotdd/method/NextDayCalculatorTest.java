@@ -63,4 +63,15 @@ class NextDayCalculatorTest {
         assertEquals(expected, result );
     }
 
+    @Test
+    void testDay31Month12Year2020(){
+        int dayTest  = 31;
+        int monthTest = 12;
+        int yearTest = 2020;
+        String expected = "1/1/2021";
+
+        String result = NextDayCalculator.getNextDay(dayTest, monthTest ,yearTest);
+        assertEquals(expected, result );
+    }
+
 }
