@@ -1,7 +1,10 @@
 package com.learn.demotdd.method;
 
 public class NextDayCalculator {
+
+    public static final String CONCATENATION = "/";
+
     public static String getNextDay(int day, int month, int year){
-        return null;
+        return ++day + CONCATENATION + month + CONCATENATION + year;
     }
 }
