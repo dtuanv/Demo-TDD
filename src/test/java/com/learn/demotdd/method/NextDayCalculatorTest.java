@@ -64,11 +64,32 @@ class NextDayCalculatorTest {
     }
 
     @Test
+    void testDay28Month2Year2020(){
+        int dayTest  = 28;
+        int monthTest = 2;
+        int yearTest = 2020;
+        String expected = "29/2/2020";
+
+        String result = NextDayCalculator.getNextDay(dayTest, monthTest ,yearTest);
+        assertEquals(expected, result );
+    }
+
+    @Test
     void testDay31Month12Year2020(){
         int dayTest  = 31;
         int monthTest = 12;
         int yearTest = 2020;
         String expected = "1/1/2021";
+
+        String result = NextDayCalculator.getNextDay(dayTest, monthTest ,yearTest);
+        assertEquals(expected, result );
+    }
+    @Test
+    void testDay28Month12Year2100(){
+        int dayTest  = 28;
+        int monthTest = 2;
+        int yearTest = 2100;
+        String expected = "1/3/2100";
 
         String result = NextDayCalculator.getNextDay(dayTest, monthTest ,yearTest);
         assertEquals(expected, result );
