@@ -35,7 +35,7 @@ public class NextDayCalculator {
                 lastOfMonth = 31;
                 break;
             case 2:
-                if(year % 4 == 0){
+                if(year % 4 == 0 && year % 100 != 0){
                     lastOfMonth = 29;
                 }else {
                     lastOfMonth = 28;
