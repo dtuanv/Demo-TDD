@@ -95,4 +95,26 @@ class NextDayCalculatorTest {
         assertEquals(expected, result );
     }
 
+    @Test
+    void testDay29Month2Year400(){
+        int dayTest  = 29;
+        int monthTest = 2;
+        int yearTest = 400;
+        String expected = "1/3/400";
+
+        String result = NextDayCalculator.getNextDay(dayTest, monthTest ,yearTest);
+        assertEquals(expected, result );
+    }
+    @Test
+    void testDay28Month2Year400(){
+        int dayTest  = 28;
+        int monthTest = 2;
+        int yearTest = 400;
+        String expected = "29/2/400";
+
+        String result = NextDayCalculator.getNextDay(dayTest, monthTest ,yearTest);
+        assertEquals(expected, result );
+    }
+
+
 }
